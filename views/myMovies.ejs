@@ -1,27 +1,26 @@
 <!doctype html>
 <html>
   <head>
-    <title>Movie Search Results</title>
+    <title>myMovies</title>
   </head>
   <body>
     <ul>
       <!-- Loop over all the films in movieList -->
-      <% movieList.forEach(function (film) {%>
+      
+      <% favorites.forEach(function(){ %>
 
       <!-- Only show the results that are movies -->
       <!-- (i.e., do not show TV shows) -->
       <% if (film.Type === "movie") { %>
 
       <!-- Show the title and the imdbID -->
-      <a href="/movie/<%=film.imdbID%>">
-      <li><%=film.Title%> - <%=film.imdbID%></li></a>
-
-
+      <li><%=film.Title%> - <%=film.imdbID%><a href="movie/<%=film.imdbID %>">Learn more...</a></li>
+        
       <!-- Close the `if` -->
       <% } %>
 
       <!-- Close the `forEach` -->
-      <% }) %>
+      <% }); %>
     </ul>
   </body>
 </html>

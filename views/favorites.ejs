@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Favorites Page</title>
+</head>
+<body>
+
+<% if(movieList.length === 0) { %>
+	<p>No movies listed</p>
+<% } else { %>
+	<% movieList.forEach(function(list) { %>
+		<p><%=list.title%></p>
+	<% }); %>
+<%}%>
+
+	
+</body>
+</html>
